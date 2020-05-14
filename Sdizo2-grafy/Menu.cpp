@@ -595,6 +595,7 @@ void Menu::test()
 	std::cout << "-Algorytm Prima:\n";
 	long long timeMatrix=0;
 	long long timeList=0;
+	this->algorithmType = AlgorithmType::MST;
 	for (int i = 0; i < 100; i++) {
 		this->random(nodesLength, 20);
 		measure->restart();
@@ -604,11 +605,12 @@ void Menu::test()
 		this->list->prim();
 		timeList += measure->returnTime();
 	}
-	std::cout << "Macierz sasiedztwa: " << timeMatrix/100 << "\n";
-	std::cout << "Lista sasiedztwa  : " << timeList / 100 << "\n\n";
+	std::cout << "Macierz sasiedztwa: " << static_cast<double>(timeMatrix)/100 << "\n";
+	std::cout << "Lista sasiedztwa  : " << static_cast<double>(timeList) / 100 << "\n\n";
 	std::cout << "-Algorytm Kruskala:\n";
 	timeMatrix = 0;
 	timeList = 0;
+	this->algorithmType = AlgorithmType::MST;
 	for (int i = 0; i < 100; i++) {
 		this->random(nodesLength, 20);
 		measure->restart();
@@ -618,11 +620,12 @@ void Menu::test()
 		this->list->kruskal();
 		timeList += measure->returnTime();
 	}
-	std::cout << "Macierz sasiedztwa: " << timeMatrix / 100 << "\n";
-	std::cout << "Lista sasiedztwa  : " << timeList / 100 << "\n\n";
+	std::cout << "Macierz sasiedztwa: " << static_cast<double>(timeMatrix) / 100 << "\n";
+	std::cout << "Lista sasiedztwa  : " << static_cast<double>(timeList) / 100 << "\n\n";
 	std::cout << "-Algorytm Dijkstry:\n";
 	timeMatrix = 0;
 	timeList = 0;
+	this->algorithmType = AlgorithmType::shortestPath;
 	for (int i = 0; i < 100; i++) {
 		this->random(nodesLength, 20);
 		measure->restart();
@@ -632,11 +635,12 @@ void Menu::test()
 		this->list->dijkstra();
 		timeList += measure->returnTime();
 	}
-	std::cout << "Macierz sasiedztwa: " << timeMatrix / 100 << "\n";
-	std::cout << "Lista sasiedztwa  : " << timeList / 100 << "\n\n";
+	std::cout << "Macierz sasiedztwa: " << static_cast<double>(timeMatrix) / 100 << "\n";
+	std::cout << "Lista sasiedztwa  : " << static_cast<double>(timeList) / 100 << "\n\n";
 	std::cout << "-Algorytm Forda-Bellmana:\n";
 	timeMatrix = 0;
 	timeList = 0;
+	this->algorithmType = AlgorithmType::shortestPath;
 	for (int i = 0; i < 100; i++) {
 		this->random(nodesLength, 20);
 		measure->restart();
@@ -646,11 +650,12 @@ void Menu::test()
 		this->list->bellmanFord();
 		timeList += measure->returnTime();
 	}
-	std::cout << "Macierz sasiedztwa: " << timeMatrix / 100 << "\n";
-	std::cout << "Lista sasiedztwa  : " << timeList / 100 << "\n\n";
+	std::cout << "Macierz sasiedztwa: " << static_cast<double>(timeMatrix) / 100 << "\n";
+	std::cout << "Lista sasiedztwa  : " << static_cast<double>(timeList) / 100 << "\n\n";
 	std::cout << "-Algorytm Forda Fulkersona:\n";
 	timeMatrix = 0;
 	timeList = 0;
+	this->algorithmType = AlgorithmType::maximumFlow;
 	for (int i = 0; i < 100; i++) {
 		this->random(nodesLength, 20);
 		measure->restart();
@@ -660,12 +665,13 @@ void Menu::test()
 		this->list->fordFulkerson();
 		timeList += measure->returnTime();
 	}
-	std::cout << "Macierz sasiedztwa: " << timeMatrix / 100 << "\n";
-	std::cout << "Lista sasiedztwa  : " << timeList / 100 << "\n\n\n";
+	std::cout << "Macierz sasiedztwa: " << static_cast<double>(timeMatrix) / 100 << "\n";
+	std::cout << "Lista sasiedztwa  : " << static_cast<double>(timeList) / 100 << "\n\n\n";
 	std::cout << "Wypelnienie 60%:\n";
 	std::cout << "-Algorytm Prima:\n";
 	timeMatrix = 0;
 	timeList = 0;
+	this->algorithmType = AlgorithmType::MST;
 	for (int i = 0; i < 100; i++) {
 		this->random(nodesLength, 60);
 		measure->restart();
@@ -675,11 +681,12 @@ void Menu::test()
 		this->list->prim();
 		timeList += measure->returnTime();
 	}
-	std::cout << "Macierz sasiedztwa: " << timeMatrix / 100 << "\n";
-	std::cout << "Lista sasiedztwa  : " << timeList / 100 << "\n\n";
+	std::cout << "Macierz sasiedztwa: " << static_cast<double>(timeMatrix) / 100 << "\n";
+	std::cout << "Lista sasiedztwa  : " << static_cast<double>(timeList) / 100 << "\n\n";
 	std::cout << "-Algorytm Kruskala:\n";
 	timeMatrix = 0;
 	timeList = 0;
+	this->algorithmType = AlgorithmType::MST;
 	for (int i = 0; i < 100; i++) {
 		this->random(nodesLength, 60);
 		measure->restart();
@@ -689,11 +696,12 @@ void Menu::test()
 		this->list->kruskal();
 		timeList += measure->returnTime();
 	}
-	std::cout << "Macierz sasiedztwa: " << timeMatrix / 100 << "\n";
-	std::cout << "Lista sasiedztwa  : " << timeList / 100 << "\n\n";
+	std::cout << "Macierz sasiedztwa: " << static_cast<double>(timeMatrix) / 100 << "\n";
+	std::cout << "Lista sasiedztwa  : " << static_cast<double>(timeList) / 100 << "\n\n";
 	std::cout << "-Algorytm Dijkstry:\n";
 	timeMatrix = 0;
 	timeList = 0;
+	this->algorithmType = AlgorithmType::shortestPath;
 	for (int i = 0; i < 100; i++) {
 		this->random(nodesLength, 60);
 		measure->restart();
@@ -703,11 +711,12 @@ void Menu::test()
 		this->list->dijkstra();
 		timeList += measure->returnTime();
 	}
-	std::cout << "Macierz sasiedztwa: " << timeMatrix / 100 << "\n";
-	std::cout << "Lista sasiedztwa  : " << timeList / 100 << "\n\n";
+	std::cout << "Macierz sasiedztwa: " << static_cast<double>(timeMatrix) / 100 << "\n";
+	std::cout << "Lista sasiedztwa  : " << static_cast<double>(timeList) / 100 << "\n\n";
 	std::cout << "-Algorytm Forda-Bellmana:\n";
 	timeMatrix = 0;
 	timeList = 0;
+	this->algorithmType = AlgorithmType::shortestPath;
 	for (int i = 0; i < 100; i++) {
 		this->random(nodesLength, 60);
 		measure->restart();
@@ -717,11 +726,12 @@ void Menu::test()
 		this->list->bellmanFord();
 		timeList += measure->returnTime();
 	}
-	std::cout << "Macierz sasiedztwa: " << timeMatrix / 100 << "\n";
-	std::cout << "Lista sasiedztwa  : " << timeList / 100 << "\n\n";
+	std::cout << "Macierz sasiedztwa: " << static_cast<double>(timeMatrix) / 100 << "\n";
+	std::cout << "Lista sasiedztwa  : " << static_cast<double>(timeList) / 100 << "\n\n";
 	std::cout << "-Algorytm Forda Fulkersona:\n";
 	timeMatrix = 0;
 	timeList = 0;
+	this->algorithmType = AlgorithmType::maximumFlow;
 	for (int i = 0; i < 100; i++) {
 		this->random(nodesLength, 60);
 		measure->restart();
@@ -731,12 +741,13 @@ void Menu::test()
 		this->list->fordFulkerson();
 		timeList += measure->returnTime();
 	}
-	std::cout << "Macierz sasiedztwa: " << timeMatrix / 100 << "\n";
-	std::cout << "Lista sasiedztwa  : " << timeList / 100 << "\n\n\n";
+	std::cout << "Macierz sasiedztwa: " << static_cast<double>(timeMatrix) / 100 << "\n";
+	std::cout << "Lista sasiedztwa  : " << static_cast<double>(timeList) / 100 << "\n\n\n";
 	std::cout << "Wypelnienie 99%:\n";
 	std::cout << "-Algorytm Prima:\n";
 	timeMatrix = 0;
 	timeList = 0;
+	this->algorithmType = AlgorithmType::MST;
 	for (int i = 0; i < 100; i++) {
 		this->random(nodesLength, 99);
 		measure->restart();
@@ -746,11 +757,12 @@ void Menu::test()
 		this->list->prim();
 		timeList += measure->returnTime();
 	}
-	std::cout << "Macierz sasiedztwa: " << timeMatrix / 100 << "\n";
-	std::cout << "Lista sasiedztwa  : " << timeList / 100 << "\n\n";
+	std::cout << "Macierz sasiedztwa: " << static_cast<double>(timeMatrix) / 100 << "\n";
+	std::cout << "Lista sasiedztwa  : " << static_cast<double>(timeList) / 100 << "\n\n";
 	std::cout << "-Algorytm Kruskala:\n";
 	timeMatrix = 0;
 	timeList = 0;
+	this->algorithmType = AlgorithmType::MST;
 	for (int i = 0; i < 100; i++) {
 		this->random(nodesLength, 99);
 		measure->restart();
@@ -760,11 +772,12 @@ void Menu::test()
 		this->list->kruskal();
 		timeList += measure->returnTime();
 	}
-	std::cout << "Macierz sasiedztwa: " << timeMatrix / 100 <<"\n";
-	std::cout << "Lista sasiedztwa  : " << timeList / 100 << "\n\n";
+	std::cout << "Macierz sasiedztwa: " << static_cast<double>(timeMatrix) / 100 << "\n";
+	std::cout << "Lista sasiedztwa  : " << static_cast<double>(timeList) / 100 << "\n\n";
 	std::cout << "-Algorytm Dijkstry:\n";
 	timeMatrix = 0;
 	timeList = 0;
+	this->algorithmType = AlgorithmType::shortestPath;
 	for (int i = 0; i < 100; i++) {
 		this->random(nodesLength, 99);
 		measure->restart();
@@ -774,11 +787,12 @@ void Menu::test()
 		this->list->dijkstra();
 		timeList += measure->returnTime();
 	}
-	std::cout << "Macierz sasiedztwa: " << timeMatrix / 100 << "\n";
-	std::cout << "Lista sasiedztwa  : " << timeList / 100 << "\n\n";
+	std::cout << "Macierz sasiedztwa: " << static_cast<double>(timeMatrix) / 100 << "\n";
+	std::cout << "Lista sasiedztwa  : " << static_cast<double>(timeList) / 100 << "\n\n";
 	std::cout << "-Algorytm Forda-Bellmana:\n";
 	timeMatrix = 0;
 	timeList = 0;
+	this->algorithmType = AlgorithmType::shortestPath;
 	for (int i = 0; i < 100; i++) {
 		this->random(nodesLength, 99);
 		measure->restart();
@@ -788,11 +802,12 @@ void Menu::test()
 		this->list->bellmanFord();
 		timeList += measure->returnTime();
 	}
-	std::cout << "Macierz sasiedztwa: " << timeMatrix / 100 << "\n";
-	std::cout << "Lista sasiedztwa  : " << timeList / 100 << "\n\n";
+	std::cout << "Macierz sasiedztwa: " << static_cast<double>(timeMatrix) / 100 << "\n";
+	std::cout << "Lista sasiedztwa  : " << static_cast<double>(timeList) / 100 << "\n\n";
 	std::cout << "-Algorytm Forda Fulkersona:\n";
 	timeMatrix = 0;
 	timeList = 0;
+	this->algorithmType = AlgorithmType::maximumFlow;
 	for (int i = 0; i < 100; i++) {
 		this->random(nodesLength, 99);
 		measure->restart();
@@ -802,8 +817,8 @@ void Menu::test()
 		this->list->fordFulkerson();
 		timeList += measure->returnTime();
 	}
-	std::cout << "Macierz sasiedztwa: " << timeMatrix / 100 << "\n";
-	std::cout << "Lista sasiedztwa  : " << timeList / 100 << "\n\n";
+	std::cout << "Macierz sasiedztwa: " << static_cast<double>(timeMatrix) / 100 << "\n";
+	std::cout << "Lista sasiedztwa  : " << static_cast<double>(timeList) / 100 << "\n\n";
 	delete measure;
 }
 
