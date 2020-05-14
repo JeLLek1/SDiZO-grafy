@@ -1,0 +1,7 @@
+﻿  AdjacencyList.cpp
+  AdjacencyMatrix.cpp
+C:\Users\JeLLek\Desktop\programowanie\sdizo2\Sdizo2-grafy\Sdizo2-grafy\AdjacencyMatrix.cpp(19,22): warning C4244: "argument": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+  Menu.cpp
+  Sdizo2-grafy.cpp
+  Generowanie kodu...
+  Sdizo2-grafy.vcxproj -> C:\Users\JeLLek\Desktop\programowanie\sdizo2\Sdizo2-grafy\Debug\Sdizo2-grafy.exe

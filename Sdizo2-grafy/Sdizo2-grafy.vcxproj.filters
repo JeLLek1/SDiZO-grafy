@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Pliki źródłowe">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Pliki zasobów">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\structures">
+      <UniqueIdentifier>{41ff532b-180f-4e8d-a927-4b82b119269e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\structures">
+      <UniqueIdentifier>{2541a3ba-7ce7-4439-84b2-c52824e08430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\configuration">
+      <UniqueIdentifier>{f9b613a7-0582-4fdb-8b54-e7de2d531dc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\containers">
+      <UniqueIdentifier>{438561a8-3ca0-4b3d-ad09-e39e16b724dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\containers">
+      <UniqueIdentifier>{c219b6d2-3e2c-4f7a-b192-3b0711f370b0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sdizo2-grafy.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="AdjacencyList.cpp">
+      <Filter>Pliki źródłowe\structures</Filter>
+    </ClCompile>
+    <ClCompile Include="AdjacencyMatrix.cpp">
+      <Filter>Pliki źródłowe\structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="List.cpp">
+      <Filter>Pliki źródłowe\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="Heap.cpp">
+      <Filter>Pliki źródłowe\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoritmReturns.cpp">
+      <Filter>Pliki źródłowe\structures</Filter>
+    </ClCompile>
+    <ClCompile Include="DisjointSets.cpp">
+      <Filter>Pliki źródłowe\structures</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeMeasure.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AdjacencyList.h">
+      <Filter>Pliki nagłówkowe\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="AdjacencyMatrix.h">
+      <Filter>Pliki nagłówkowe\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>Pliki nagłówkowe\configuration</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="List.h">
+      <Filter>Pliki nagłówkowe\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="List.tpp">
+      <Filter>Pliki nagłówkowe\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgorithmType.h">
+      <Filter>Pliki nagłówkowe\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Heap.h">
+      <Filter>Pliki nagłówkowe\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Pliki nagłówkowe\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoritmReturns.h">
+      <Filter>Pliki nagłówkowe\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="DisjointSets.h">
+      <Filter>Pliki nagłówkowe\structures</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeMeasure.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Sdizo2-grafy.rc">
+      <Filter>Pliki zasobów</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
