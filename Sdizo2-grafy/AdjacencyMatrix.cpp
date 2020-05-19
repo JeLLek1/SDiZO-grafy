@@ -158,6 +158,7 @@ SpanningTree* AdjacencyMatrix::prim()
 		nodeArray[i]->weight = INT_MAX;
 		//Kolejka priorytetowa
 		queue->push(nodeArray[i]);
+		inQueue[i] = true;
 	}
 	//Wierzcho³kiem startowym bêdzie 0
 	nodeArray[0] = new Edge();
@@ -184,7 +185,6 @@ SpanningTree* AdjacencyMatrix::prim()
 		//naprawa kolejki priorytetowej po zmianach
 		queue->floydConvert();
 	}
-
 	//Usuwanie wszystkich wielkoœci pomocniczych i tworzenie listy krawêdzi
 	for (size_t i = 0; i < this->nodesLength; i++) {
 		//wierzcholek zerowych pomijamy
@@ -200,6 +200,7 @@ SpanningTree* AdjacencyMatrix::prim()
 		}
 		delete nodeArray[i];
 	}
+
 	delete[] nodeArray;
 	delete[] inQueue;
 	delete queue;

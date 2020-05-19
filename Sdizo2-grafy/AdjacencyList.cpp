@@ -148,6 +148,7 @@ SpanningTree* AdjacencyList::prim()
 		nodeArray[i]->weight = INT_MAX;
 		//Kolejka priorytetowa
 		queue->push(nodeArray[i]);
+		inQueue[i] = true;
 	}
 	//Wierzcho³kiem startowym bêdzie 0
 	nodeArray[0] = new Edge();
