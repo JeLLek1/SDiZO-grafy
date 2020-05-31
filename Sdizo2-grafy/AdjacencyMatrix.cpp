@@ -352,11 +352,11 @@ ShortestPath* AdjacencyMatrix::bellmanFord()
 			}
 		}
 	}
-	//usuwanie listy krawêdzi i sprawdzanie czy nie mia³y wag ujemnych
+	//usuwanie listy krawêdzi i sprawdzanie czy nie ma przebiegu ujemnego
 	edgeList->setItHead();
 	Edge* edge;
 	while ((edge = edgeList->getNext()) != nullptr) {
-		if (edge->weight < 0) {
+		if (path->nodes[edge->nodeTo]->weight > path->nodes[edge->nodeFrom]->weight + edge->weight) {
 			path->signedValues = true;
 		}
 		delete edge;

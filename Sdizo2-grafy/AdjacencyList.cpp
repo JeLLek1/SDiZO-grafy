@@ -336,14 +336,15 @@ ShortestPath* AdjacencyList::bellmanFord()
 		}
 	}
 
-	//sprawdzanie czy nie mia³y wag ujemnych
+	//sprawdzanie czy nie ma przebiegu ujemnego
 	//dla ka¿dej krawêdzi
 	for (size_t j = 0; j < this->nodesLength; j++) {
 		this->listsArray[j]->setItHead();
 		Node* node;
 		while ((node = this->listsArray[j]->getNext()) != nullptr) {
-			if (node->weight < 0) {
+			if (path->nodes[node->nodeTo]->weight > path->nodes[j]->weight+node->weight) {
 				path->signedValues = true;
+				return path;
 			}
 		}
 	}
